@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <!--    设置字符集-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/success.css" type="text/css">
+</head>
+<body>
+<!-- 标题栏 -->
+<!-- 图片和展示 -->
+<div class="tab_top">
+    <div>
+        <img class="img_icn" src=""></img>
+        <div th:text="${user.username}"></div>
+        </div>
+    </div>
+</div>
+        <!-- 导航栏 -->
+
+        <!-- 信息展示 -->
+
+        <table th:each="item:${listUsers}">
+            <tr>
+                <th>id号</th>
+                <th>username</th>
+                <th>password</th>
+                <th>sex</th>
+                <th>age</th>
+            </tr>
+            <tr>
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.username}"></td>
+                <td th:text="${item.password}"></td>
+                <td th:text="${item.sex}"></td>
+                <td th:text="${item.age}"></td>
+            </tr>
+        </table>
+</body>
+</html>

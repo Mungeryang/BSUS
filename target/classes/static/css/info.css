@@ -1,0 +1,30 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+body{
+  width: 1000px;
+  text-align: center;
+}
+#test div{
+  width: 160px;
+  height: 30px;
+  display:inline;
+}
+tr th{
+  width: 160px;
+  height: 30px;
+  text-align: center;
+}
+tr td{
+  width: 160px;
+  height: 30px;
+  text-align: center;
+}
+
+#pa{
+  width: 160px;
+  height: 30px;
+   text-align: center;
+   display:inline;
+}

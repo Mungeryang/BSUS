@@ -1,0 +1,100 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+
+.box0{
+    width: 1520px;
+    min-height: 1020px;
+    background-image: url(../image/back.jpeg);
+    /* background-color: aqua; */
+    background-size: contain;
+    
+}
+.hezi>.hezi1:hover span {
+    color: red;    
+}
+.hezi{
+    /* transition: all 2s linear 0s; */
+    width: 200px;
+    height:200px;
+    background-color: rgba(255, 255, 255, 0.16);
+    margin: 25px;
+    float: left;
+    /* opacity: 0.12; */
+   
+    border-radius: 8px;
+}
+/* 大盒子上动画时间 */
+.box0:hover .hezi{
+
+    transition:all 1.5s linear; 
+}
+/* 给小盒子上动画时间 */
+
+.box1 .hezi:hover{  
+    transition: all 0.3s linear;
+    transform: translateX(10px);
+    /* opacity: 0.7; */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30%;}
+
+/* box1是承载界面的盒子 */
+.box1{
+    width: 800px;
+    min-height: 400px;
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    margin-left:-227.5px; ;
+    margin: 0  auto; 
+   background-color: rgba(159, 187, 187,0.1);
+   /* background-color: transparent; */
+}
+/* 盒子容纳着内容 */
+.hezi1{
+height: 150px;
+/* background-color: blue; */
+position: relative;
+}
+.hezi1 span{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+
+}
+.hezi2 span{
+    position: absolute;
+  
+    text-align: center;
+    font-size: 18px;
+    left:60px;
+    top: 5px;
+
+}
+.hezi2{
+height: 50px;
+/* background-color: chartreuse; */
+position: relative;
+}
+.box2{
+    float: right;
+     width: 200px;
+     background-color: bisque;
+     height: 500px;
+     position: relative;
+     top: 0px;
+     right: 0px;
+     height: 0px;
+     content: " ";
+     font-size: 10px;
+     color: brown;
+     background-image: url(../../Login/image/放飞梦想图片.jpg);
+     background-size:contain ;
+     text-align: right;
+    
+}
+
+
+

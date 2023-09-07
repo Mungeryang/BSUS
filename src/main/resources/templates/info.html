@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>信息浏览</title>
+    <link rel="stylesheet" href="./css/info.css" type="text/css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+
+    <!--    <script th:inline="javascript">-->
+    <!--    var className = [[${className}]];-->
+    <!--     alert(className);-->
+    <!--    console.log(className);-->
+    <!--    $('option[value="物理"]').attr("selected",true);-->
+    <!--    </script>-->
+    <style>
+
+        #h2{
+            position:absolute;left: 50%;margin-left: -45px;margin-top:18px;font-size:30px;font-style:italic;font-size: 50px;
+            word-spacing: 5px;
+        }
+      body{
+          display:flex;
+          flex-direction:column;
+      }
+
+      .test{
+        display: flex;
+        /* background-color: aqua; */
+        position:absolute;
+        left:30px;
+        top: 30px;
+        box-sizing: border-box;
+        /* top:200px; */
+        /* width:300px; */
+        /* height: 300px; */
+        border-radius: 83px;
+        background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        box-shadow:  5px 5px 10px #747474,
+             -25px -25px 50px #ffffff;
+             /* padding: 60px; */
+      }
+
+      input[type="submit"]{
+          position:relative;
+          top:30px;
+          left:50px;
+      }
+      input{
+        border:1px black solid;
+        margin-top:10px;
+      }
+
+      label{
+
+        font-size:16px;
+        font-weight:600;
+        font-style: italic;
+        
+      }
+      option:hover{
+        font-weight:900;
+        /* font-size:20px; */
+      }
+
+table{
+    line-height: 22px;
+    overflow: hidden;
+    width:900px;
+    height:37.2px;
+
+
+}
+tbody tr:nth-child(2n){
+    background-color: rgb(214, 118, 84);
+}
+tbody tr:nth-child(2n-1){
+    background-color: rgb(209, 188, 95);
+}
+tbody tr:hover{
+    
+    background-color: darkseagreen;
+    font-weight:900;
+    /* font-size:larger; */
+}
+
+thead th{
+    border: 2px black ;
+    border-radius: 20%;
+    background-color: rgb(63, 148, 190);
+    color: azure;
+}
+
+#Table{
+    margin:200px 0 0 150px;
+}
+
+
+
+
+         .buttonClass {
+             font-size:15px;
+             font-family:Arial;
+             width:70px;
+             height:25px;
+             border-width:1px;
+             color:#666666;
+             border-color:#dcdcdc;
+             font-weight:bold;
+             border-top-left-radius:6px;
+             border-top-right-radius:6px;
+             border-bottom-left-radius:6px;
+             border-bottom-right-radius:6px;
+             box-shadow:inset 0px 1px 0px 0px #ffffff;
+             text-shadow:inset 0px 1px 0px #ffffff;
+             background:linear-gradient(#ffffff, #f6f6f6);
+         }
+
+        .buttonClass:hover {
+            background: linear-gradient(#f6f6f6, #ffffff);
+        }
+
+
+    </style>
+<body>
+    <form action="/getInfo" id="form" method="get">
+
+        <h2 id="h2" >大学查询</h2>
+        <div id="test" class="test">
+            <!--        <div style="display:inline;">-->
+            <div>
+                <label for="className">科类：</label>
+                <select style="width:100px" name="className" id="className">
+                    
+                  
+                    <option value="物理">物理</option>
+                    <option value="历史">历史</option>
+                    <option value="艺术">艺术</option>
+                    <option value="综合改革">综合改革</option>
+                    <option th:value="${className}" th:text="${className}==''?'':${className}" selected>ALL</option>
+                </select>
+            </div>
+            <br>
+    
+            <div>
+                <label for="major">专业：</label>
+                <input id="major" name="major" style="width:100px" th:value="${major}"></input>
+            </div>
+     
+            <br>
+    
+            <div>
+                <label for="year">年份：</label>
+                <input id="year" name="year" style="width:100px" th:value="${year}"></input>
+            </div>
+    
+            <div class="buttons">
+                <input value="查 询" type="submit" id="reg_btn" class="buttonClass">
+            </div>
+
+            <!--<div class="buttons">
+                <input value="返回首页" type="submit" id="back_btn" class="buttonClass" onclick="window.location.reload()">
+            </div>-->
+
+
+        </div>
+        <!--<div>-->
+            <a href="lead.html">返回首页</a>
+        <!--</div>-->
+    
+    
+    <!--    <div>-->
+    
+    
+    
+           <div id="Table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>科目</th>
+                        <th>批次</th>
+                        <th>专业</th>
+                        <th>最高分</th>
+                        <th>最低分</th>
+                        <th>平均分</th>
+                        <th>年份</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="item:${listScores}">
+                        <td th:text="${item.className}"></td>
+                        <td th:text="${item.orders}"></td>
+                        <td th:text="${item.major}"></td>
+                        <td th:text="${item.max}"></td>
+                        <td th:text="${item.min}"></td>
+                        <td th:text="${item.mean}"></td>
+                        <td th:text="${item.year}"></td>
+                    </tr>
+                    </tbody>
+        
+                </table>
+       
+    
+                <p>当前 <span th:text="${pageInfo.pageNum}"></span> 页,总 <span th:text="${pageInfo.pages}"></span> 页,共 <span
+                        th:text="${pageInfo.total}"></span> 条记录</p>
+                <a th:href="@{/getInfo(className=${className},major=${major},year=${year})}" style="text-decoration: none;font-style:normal;font-weight: 600;color:black">首页</a>
+                <a style="font-style:normal;text-decoration: none;" th:href="@{/getInfo(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1,className=${className},major=${major},year=${year})}">上一页</a>
+                <a style="font-style: normal; text-decoration:none;" th:href="@{/getInfo(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages},className=${className},major=${major},year=${year})}">下一页</a>
+                <a th:href="@{/getInfo(pageNum=${pageInfo.pages},className=${className},major=${major},year=${year})}" style="font-weight:600;border-radius: 25px;
+                background: #f3ecec;
+               font-style:normal;text-decoration: none;color:black;">尾页</a>
+         </div>
+    <!--    </div>-->
+    </form>
+</body>
+<script language="javascript" type="text/javascript">
+
+<!--$(function () {-->
+
+<!--var usedNames = {};-->
+<!--$("select > option").each(function () {-->
+<!--  if(usedNames[this.text]) {-->
+<!--     $(this).remove();-->
+<!-- } else {-->
+<!--     usedNames[this.text] = this.value;-->
+<!-- }});-->
+
+<!--});-->
+
+
+<!--$('#demo option:eq(1)').attr('selected','selected');-->
+<!--  var className = $('#className option:eq(0)').val();-->
+<!--       alert(className);-->
+<!--         $('select').find('option[value=""+className+""]').not('option:gt(0)').remove();;-->
+<!--         alert(aa);-->
+<!--  $("select option:contains("+className+"):gt(0)").remove();-->
+<!--$('#className option:eq(1)').remove();-->
+<!--$('select').find('option[value="2"]').prop('selected',true);-->
+<!--$('#className option').not('option:first').remove();-->
+
+</script>
+
+</html>

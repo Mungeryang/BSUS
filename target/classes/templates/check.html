@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>确定身份</title>
+    <style>
+        #box1:hover{
+            box-shadow:1px 1px 10px 10px #add8e6;
+
+        }
+        body{
+                /*background: #0727d7 !important;*/
+    /*background-image:linear-gradient(90deg, #0727d7, #00aa90);*/
+    /*background: linear-gradient(35deg, #CCFFFF, #FFCCCC);*/
+    background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
+
+        }
+        form{
+            box-sizing: border-box;
+            padding: 30px;
+            border-radius: 20%;
+            position: absolute;
+            margin-left: -250px;
+            margin-top:-200px;
+            left: 80%;
+            top: 60%;
+            display:flex;
+            flex-direction: column;
+            width:350px;
+            height:400px;
+            background:linear-gradient(45deg,#58a8ab 70%,rgb(163, 178, 101) 100%);
+        }
+        div>label{
+            position: relative;
+            margin-right:30px;
+            width: 100%;
+            height: 100%;
+            font-size: 30px;
+            font-weight: 990;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        form input:nth-child(1){
+            position: absolute;
+            /* top: -60px; */
+            width: 50px;
+            height: 70px;
+            border: 0px black;
+            z-index: -1;
+
+        }
+
+        form input:nth-child(2){
+            z-index: -1;
+            position: absolute;
+            /* top: -60px; */
+
+            width: 50px;
+            height: 70px;
+            border: 0px black;
+            /* box-shadow: 20px 10px ; */
+        }
+
+        form input:nth-child(3){
+            display: block;
+            box-sizing: border-box;
+            width: 100px;
+            height: 50px;
+            border: 0px black;
+            /* color: red; */
+            /* background-color: aqua; */
+            text-align: center;
+            border-radius: 30%;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 500;
+            position: relative;
+            top: 30px;
+
+            /* box-shadow: 20px 10px ; */
+            left:200px;
+            /* top: 50px; */
+        }
+
+        form input:nth-child(3):hover{
+
+
+            /* margin-left:-5; */
+            font-weight:600;
+            background-color: bisque;
+            box-shadow: 2px 2px 10px 10px white;
+
+        }
+
+
+        form div:nth-child(1){
+            position: relative;
+            height: 50px;
+            width: 50%;
+            display: inline-block;
+            /* background-color: blueviolet; */
+            border-radius: 10%/40%;
+
+        }
+        div>label{
+            position: absolute;
+            left: 18%;
+            top: 10px;
+            /* margin-left: -50%; */
+        }
+        form div:nth-child(2){
+            position: relative;
+            top: 20px;
+            height: 50px;
+            width: 50%;
+            /* background-color: rgb(19, 112, 81); */
+            display: inline-block;
+            border-radius: 10%/40%;
+        }
+
+        body{background:linear-gradient(75deg,rgb(132, 87, 87) 30%,rgb(189, 214, 181)0%)
+
+        }
+
+    </style>
+</head>
+<body >
+    <h1 style="text-align:center;display:block;width:100%;">BSUS-The Bridge BETWEEN Student AND University</h1>
+    <h2>项目的导航页面与查询页面CSS设计：高文龙</h2>
+    <h2>项目的后台接口与部分个性新增功能：杨桂淼</h2>
+    <h3>天下大事，必作于细!-龍渺科技&trade;</h3>
+
+              <form action="role" method="get">
+            <div id="box1" for="one">  <input type="radio" value="1" id="one" checked="checked" name="role"></input><label for="one">学生</label></div>
+              
+             <div id="box2" for="two">
+                  <input type="radio" value="2" id="two" name="role"></input><label for="two">管理员</label> 
+                  
+                 
+             </div >
+             <input type="submit" value="提交">
+             
+            </form>
+
+
+
+<!--                                                                                        <a href="login.html"><input type="radio" value="1" id="one" >学生</a><br>-->
+<!--                                                                                        <a href="editUser.html"><input type="radio" value="1" id="two" >管理员</a><br>-->
+<!--                                                                                        <input type="button" value="提交" style="text-align: center">-->
+     
+
+    </form>
+
+<script>
+  if(one.checked){
+        console.log(1)
+        box2.style.background="white"
+        box1.style.background="linear-gradient(-90deg, #29bdd9 0%, #276ace 100%)"
+        
+    // background-image: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
+    }
+    else if(two.checked){
+        console.log(2)
+        box1.style.background="white"
+        box2.style.background="linear-gradient(-90deg, #29bdd9 0%, #276ace 100%)"
+         }
+console.log(one.checked,two.checked)
+onclick=function(){
+    console.log(one.checked,two.checked)
+    if(one.checked){
+        console.log(1)
+        box2.style.background="white"
+        box1.style.background="linear-gradient(-90deg, #29bdd9 0%, #276ace 100%)"
+    }
+    else if(two.checked){
+        console.log(2)
+        box1.style.background="white"
+        box2.style.background="linear-gradient(-90deg, #29bdd9 0%, #276ace 100%)"
+         }
+}
+</script>
+</body>
+</html>

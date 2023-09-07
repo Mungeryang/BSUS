@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+<div class="ui container">
+    <form class="ui form" th:action="@{/add}" method="post" th:object="${school}">
+        <input type="hidden" th:value="*{id}" name="id">
+        <div class="field">
+            <label>学校名称</label>
+            <input type="text" name="name" placeholder="请输入学校名称" required th:value="*{name}">
+        </div>
+        <div class="field">
+            <label>投档最低分</label>
+            <input type="text" name="score" placeholder="请输入投档最低分" required th:value="*{score}">
+        </div>
+        <div class="field">
+            <label>办学层次</label>
+            <input type="text" name="stage" placeholder="请输入办学层次" required th:value="*{stage}">
+        </div>
+        <div class="field">
+            <label>所在城市</label>
+            <input type="text" name="addr" placeholder="请输入所在城市" required th:value="*{addr}">
+        </div>
+<!--        <div class="field">-->
+<!--            <label>密码</label>-->
+<!--            <input type="text" name="password" placeholder="请输入密码" required>-->
+<!--        </div>-->
+        <button class="ui button" type="submit">提交</button>
+    </form>
+
+    <div class="ui success  message" th:unless="${#strings.isEmpty(message)}">
+        <i class="close icon"></i>
+        <div class="header">提示：</div>
+        <p th:text="${message}"></p>
+    </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    $(".message .close").on('click',function () {
+        $(this).closest(".message")
+            .transition("fade");
+    })
+</script>
+</body>
+</html>

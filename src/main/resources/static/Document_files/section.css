@@ -1,0 +1,174 @@
+*{margin: 0;padding: 0;}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height: 80px;
+    background-color: aqua;
+    background:linear-gradient(180deg, rgb(207, 214, 70) 1% ,white );
+}
+
+section{flex:1;  background-color: rgb(255, 255, 255);display:flex;flex-direction: column;
+overflow: auto;}
+
+ footer{height:80px;background-color: rgb(123, 149, 166);}
+
+
+ h1{
+  position: absolute ; left: 900px; top:20px;
+}
+header{
+  position:relative
+}
+.user{
+  width: 70px; height: 100px;
+  position: absolute; top: 2px; right: 18px;
+  /* background-color: aquamarine; */
+  background-image: url(../../Login/image/User_icon.png);
+  background-size: 70px 80px;
+  background-repeat: no-repeat;
+}
+.user{
+  text-align: center;
+  color: rgb(15, 16, 14);
+  font-size: larger;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column-reverse;
+  /* position: relative; */
+
+}
+.yuanxiao span:nth-child(1){
+  /* opacity:0; */
+  position: sticky;
+  top: 0px;
+
+
+}
+main{position: relative;
+}
+
+tbody td:nth-child(1){
+  background-color: rgb(170, 182, 189);
+  width: 150px;
+  font-size: 20px;
+  font-weight: 900;
+}
+tbody td:nth-child(2){
+  background-color: rgb(192, 191, 190);
+  width: 450px;
+  font-size:16px;
+  font-weight: 900;
+}
+/* tbody td:nth-child(3){
+  background-color: rgb(212, 33, 33);
+  width:300px;
+} */
+.sub{}
+/* .sub input[type="checkbox"]{
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+} */
+input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 14px;
+    margin: 0 5px 0 15px;
+    position: relative;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+  }
+
+  input[type="checkbox"]:checked::before {
+    content: "\2713";
+    background-color: #e5f7e5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+fieldset legend{
+    font-size: 30px;
+    font-weight: 900;
+}
+fieldset{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+}
+.buttonClass {
+    position:relative;
+    top:-2px;
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:2px;
+    color:#93a165;
+    border-color:#8f7a4a;
+    font-weight:bold;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    box-shadow: 0px 1px 0px 0px #1c1b18;
+    text-shadow: 0px 1px 0px #8f5454;
+    background:linear-gradient(#796a3c, #5c6c7e);
+  }
+  
+  .buttonClass:hover {
+    background: linear-gradient(#48453c, #a78e42);
+  }
+main{
+    display: grid;
+    grid-template-areas:2/3 ;
+}
+
+/* 通过伪元素为label添加选矿 */
+
+main{
+    display: grid;
+    height: auto;
+    width: 100%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    main div:nth-child(1) { grid-area: 1 / 1 / 5 / 4;  background-color: antiquewhite;}
+
+    main div:nth-child(2) { grid-area: 1 / 2 / 2 / 3; background-color: rgb(109, 111, 116);}
+
+.yuanxiao{
+    overflow: auto;
+}    
+.yuanxiao td{
+    text-align:center;
+
+}
+                

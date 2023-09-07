@@ -1,0 +1,88 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+
+.box0{
+    width: 1520px;
+    min-height: 1020px;
+    background-image: url(../image/55e5b8669c778ea04a3970cf0386ccf.jpg);
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    /* background-color: aqua; */
+    background-size: cover;
+    
+}
+.hezi>.hezi1:hover span {
+    color: red;
+    
+}
+.hezi{
+    transition: all 0.3s linear;
+}
+.box1{
+    width: 800px;
+    min-height: 400px;
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    margin-left:-227.5px; ;
+    margin: 0  auto; 
+   background-color: rgba(159, 187, 187,0.4);
+   /* background-color: transparent; */
+}
+.hezi1{
+height: 150px;
+/* background-color: blue; */
+position: relative;
+}
+.hezi1 span{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+
+}
+.hezi2 span{
+    position: absolute;
+  
+    text-align: center;
+    font-size: 18px;
+    left:60px;
+    top: 5px;
+
+}
+.hezi:hover:first-child{
+    transform:scale(1.2);
+}
+.hezi2{
+height: 50px;
+/* background-color: chartreuse; */
+position: relative;
+}
+.box2{
+    float: right;
+     width: 200px;
+     background-color: bisque;
+     height: 500px;
+     position: relative;
+     top: 0px;
+     right: 0px;
+     height: 0px;
+     content: " ";
+     font-size: 10px;
+     color: brown;
+     background-image: url(../../Login/image/放飞梦想图片.jpg);
+     background-size:contain ;
+     text-align: right;
+    
+}
+.hezi{
+    width: 200px;
+    height:200px;
+    background-color: rgba(255, 255, 255, 0.12);
+    margin: 25px;
+    float: left;
+}
+
+

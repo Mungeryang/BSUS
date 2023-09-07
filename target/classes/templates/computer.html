@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org"
+            xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>score</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            background-size: cover;
+            min-width: 1000px;
+            background-image:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F7302b695c065ff39375299bf7eabccf3e456c97ed6cc-m54k7D_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665572688&t=701de572418d3878ee9939396cc239a6);
+            font-size:14px;
+            margin: auto auto;
+            width: 1000px;
+        }
+        #main {
+            width:400px;
+            height:500px;
+            background:#fff;
+            border:1px solid #ddd;
+            margin:30px auto;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .title {
+            height: 48px;
+            line-height: 48px;
+            color:#333;
+            font-size:16px;
+            font-weight:bold;
+            border-bottom:1px dashed #eee;
+            text-align: center;
+        }
+        #main form {
+            width:500px;
+            margin:20px 0 0 40px;
+        }
+        #main form label {
+            margin:20px 0 0 40px;
+            display:block;
+        }
+        #main form label input.text {
+            width:200px;
+            height:25px;
+        }
+
+        #main form label input.submit1 {
+            width: 250px;
+            display: block;
+            height: 40px;
+            cursor: pointer;
+            margin: 20px 0 0 2px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div class="title" style="text-align: center">志愿填报信息单</div>
+    <form action="/bbb" method="post" >
+        <label>姓名：<input class="text" type="text"  placeholder="姓名" name="name" id="name"/></label>
+        <br><label>高考分数:<input class="text" type="text"  placeholder="高考分数" name="score" id="score"/></label>
+        <br><label>意向大学:<input class="text" type="text"  placeholder="意向大学" name="school" id="school"/></label>
+        <br><label>意向志愿1:<input class="text" type="text"  placeholder="意向志愿1" name="major1" id="major1"/></label>
+        <br><label>意向志愿2:<input class="text" type="text"  placeholder="意向志愿2" name="major2" id="major2"/></label>
+        <br><label>意向志愿3:<input class="text" type="text"  placeholder="意向志愿3" name="major3" id="major3"/></label>
+        <br><label><input class="submit1" type="submit" name="submit" value="提交信息" id="submit" onclick="submit()"/></label>
+        <!--<br><label>信用分数:<input class="text" type="text"  placeholder="信用分数" name="loans" id="res"/></label><br>-->
+
+</form>
+</body>
+
+<script language="javascript" type="text/javascript">
+ var a = document.getElementById("submit");
+ a.onclick=function () {
+alert("提交成功");
+ }
+    function submit() {
+
+
+
+
+        /*let s1 = document.getElementById('money').value;
+        let s2 = document.getElementById('phone').value;
+        let s3 = document.getElementById('loans').value;
+        let s4 = document.getElementById('credit').value;
+        //let s5 = ((parseFloat(s1)*0.0001) + (parseFloat(s2)*0.0001) + (parseFloat(s3)) + (parseFloat(s4)*0.0001))/10;
+        if (parseInt(s1) <3000){
+            document.getElementById("res").value = 0.4;
+        }else if (3000 < parseInt(s1) <= 6000){
+            document.getElementById("res").value = 0.6;
+        }else if (6000 < parseInt(s1) <= 10000){
+            document.getElementById("res").value = 0.8;
+        }*/
+
+
+
+        //document.getElementById("res").value = s5;
+        //document.getElementById("s5").addEventListener('click', function(){}, false);
+    }
+</script>
+
+</html>

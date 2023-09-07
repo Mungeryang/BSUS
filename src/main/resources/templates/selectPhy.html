@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>信息浏览</title>
+    <link rel="stylesheet" href="./css/info.css" type="text/css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+
+    <!--    <script th:inline="javascript">-->
+    <!--    var className = [[${className}]];-->
+    <!--     alert(className);-->
+    <!--    console.log(className);-->
+    <!--    $('option[value="物理"]').attr("selected",true);-->
+    <!--    </script>-->
+    <style>
+
+        #h2{
+            position:absolute;left: 50%;margin-left: -45px;margin-top:18px;font-size:30px;font-style:italic;font-size: 50px;
+            word-spacing: 5px;
+        }
+        body{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .test{
+            display: flex;
+            /* background-color: aqua; */
+            position:absolute;
+            left:30px;
+            top: 30px;
+            box-sizing: border-box;
+            /* top:200px; */
+            /* width:300px; */
+            /* height: 300px; */
+            border-radius: 83px;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow:  5px 5px 10px #747474,
+            -25px -25px 50px #ffffff;
+            /* padding: 60px; */
+        }
+
+        input[type="submit"]{
+            position:relative;
+            top:30px;
+            left:50px;
+        }
+        input{
+            border:1px black solid;
+            margin-top:10px;
+        }
+
+        label{
+
+            font-size:16px;
+            font-weight:600;
+            font-style: italic;
+
+        }
+        option:hover{
+            font-weight:900;
+            /* font-size:20px; */
+        }
+
+        table{
+            line-height: 22px;
+            overflow: hidden;
+            width:900px;
+            height:37.2px;
+
+
+        }
+        tbody tr:nth-child(2n){
+            background-color: rgb(214, 118, 84);
+        }
+        tbody tr:nth-child(2n-1){
+            background-color: rgb(209, 188, 95);
+        }
+        tbody tr:hover{
+
+            background-color: darkseagreen;
+            font-weight:900;
+            /* font-size:larger; */
+        }
+
+        thead th{
+            border: 2px black ;
+            border-radius: 20%;
+            background-color: rgb(63, 148, 190);
+            color: azure;
+        }
+
+        #Table{
+            margin:200px 0 0 150px;
+        }
+
+
+
+
+        .buttonClass {
+            font-size:15px;
+            font-family:Arial;
+            width:70px;
+            height:25px;
+            border-width:1px;
+            color:#666666;
+            border-color:#dcdcdc;
+            font-weight:bold;
+            border-top-left-radius:6px;
+            border-top-right-radius:6px;
+            border-bottom-left-radius:6px;
+            border-bottom-right-radius:6px;
+            box-shadow:inset 0px 1px 0px 0px #ffffff;
+            text-shadow:inset 0px 1px 0px #ffffff;
+            background:linear-gradient(#ffffff, #f6f6f6);
+        }
+
+        .buttonClass:hover {
+            background: linear-gradient(#f6f6f6, #ffffff);
+        }
+
+
+    </style>
+<body>
+<form action="/aaa" id="form" method="get">
+
+    <h2 id="h2" >一分一档-物理组合</h2>
+    <div id="test" class="test">
+        <!--        <div style="display:inline;">-->
+
+        <br>
+
+        <br>
+
+
+    <div>
+        <!--<label >科目：</label>
+        <input type="checkbox" >-->
+        <label >请输入分数：</label>
+        <input name="score" type="text" />
+
+    </div>
+    <div class="buttons">
+        <input value="查 询" type="submit" class="buttonClass">
+    </div>
+
+
+
+
+
+        <!--<div class="buttons">
+            <input value="返回首页" type="submit" id="back_btn" class="buttonClass" onclick="window.location.reload()">
+        </div>-->
+
+
+    </div>
+    <!--<div>-->
+    <a href="lead.html">返回首页</a>
+    <!--</div>-->
+
+
+    <!--    <div>-->
+
+
+
+    <div id="Table">
+        <table>
+            <thead>
+            <tr>
+                <th>分数</th>
+                <th>人数</th>
+                <th>排名</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item:${aaa}">
+                <td th:text="${item.score}"></td>
+                <td th:text="${item.phy_nums}"></td>
+                <td th:text="${item.phy_order}"></td>
+
+            </tr>
+            </tbody>
+
+        </table>
+
+
+
+    </div>
+    <!--    </div>-->
+</form>
+</body>
+
+
+
+
+</html>

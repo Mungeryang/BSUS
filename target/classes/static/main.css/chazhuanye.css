@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{height: 100%;}
+ul{
+    list-style: none;
+    width: 100%;
+    /* display: flex; */
+}
+header>ul{
+    /* flex: 1; */
+    list-style: none;
+    width: 100%;
+    display: flex;
+}
+
+body>header{
+height: 100px;
+background-color: rgb(176, 137, 212);
+/* background-color:; */
+background:linear-gradient(#b4ba9c 40%,white 100%)
+}
+body>section{
+    height: calc(100% - 200px);
+    position: relative;
+    background-color: rgb(160, 198, 110);
+    display: flex;
+
+}
+footer{
+    height: 100px;
+    background-color: 60px;
+}
+section{
+    overflow: hidden;
+}
+
+section>var{
+    display:block;
+    /* position: sticky; */
+    height: 60px;
+    /* background-color: rgb(110, 194, 36); */
+    width: 300px;
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; */
+    /* overflow: auto; */
+}
+section var::before{
+    content: "请使用下列选项查看相关学校";
+    text-align:center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    background-color: yellow;
+    flex: 1;
+}
+main>header{
+    height: 60px;
+    background-color: brown;
+    line-height: 60px;
+    align-items: center;
+
+}
+main li{
+    /* display: block; */
+    float: left;
+    /* margin:0 20px ; */
+    /* width: 16.66%; */
+    flex: 1;
+    /* justify-content: space-around; */
+    line-height: 60px;
+    height: 60px;
+    background-color: black;
+    color: red;
+    text-align:center;
+}
+
+
+main>section{
+    flex: 1;
+    background-color: rgb(165, 190, 223);
+}
+
+table{border-top:1px solid #333;
+    border-left:1px solid #333;
+    border-spacing:0;
+    background-color:#fff;
+    width:100%;
+}
+table td{
+    font-size:20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 900;
+}
+table td:not(:nth-child(1)){
+    
+    /* border-bottom:1px solid #333;
+    border-right:1px solid #333; */
+    width:auto;
+}
+table td:nth-child(1){
+    width: auto;
+}
+/* .et3{text-align:left;} */
+.font0{
+
+    color:rgb(0, 0, 0);
+}
+tr td:nth-child(){
+    background-color: antiquewhite;
+}
+
+tr:hover td{
+    /* font-weight: 900;
+    font-size: larger; */
+    background-color: rgb(207, 200, 191);
+    /* transform:scale(1.02) ; */
+}
+
+tr td:nth-child(1)
+{
+    /* font-size: ; */
+}
+thead th{
+    height: 30px;
+    line-height: 30px;
+    font-weight: larger;
+    font-size: 20px;
+    margin-bottom:10px;
+}
+      
+.buttonClass1 {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  text-align:center;
+  line-height: 50px;
+  text-decoration: none;
+
+  font-size:15px;
+  width:140px;
+  height:50px;
+  color:rgba(26, 28, 31, 0.5);
+
+
+  font-weight:bold;
+
+  border-radius: 10%;
+border-bottom: red 2px;
+  background: rgba(15, 68, 122, 0);
+  
+}
+
+.buttonClass1:hover {
+
+  color: red;
+  background:rgba(15, 68, 122, 0.2);
+}
+

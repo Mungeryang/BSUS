@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./css/lead.css">
+</head>
+<body>
+    <div class="box0">
+
+      <div class="box1">
+        <h1 style="text-align: center; color: rgb(0, 0, 0); ">后台管理</h1>
+          <div id="errorMsg" th:text="${username}"></div>
+        <br> <br>
+<!--          th:attr="myMoney=${money}"-->
+           <a href="./getUser" style="color:black; text-decoration: none;">
+                <div class="hezi">
+    
+                    <div class="hezi1">
+                        <br><span class="title">用户管理</span>
+                  <br><br>
+                  
+                    <span style="display:inline-block;font-size:15px;color:green;
+                    
+                    ">[按用户]</span>
+                    <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[按地区]</span>
+                    <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键查询]</span>
+                    </div>
+    
+                    <div class="hezi2"><span> 查询用户信息</span></div>
+                </div>
+           </a>  
+
+
+           <a href="./getData" style="color:black; text-decoration: none;">
+                <div class="hezi">
+    
+                    <div class="hezi1">
+                        <br><span class="title">数据管理</span>
+                  <br><br>
+                  
+                    <span style="display:inline-block;font-size:15px;color:green;
+                    
+                    ">[按分数]</span>
+                    <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[按位次]</span>
+                    <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键筛选]</span>
+                    </div>
+    
+                    <div class="hezi2"><span> 轻松选大学</span></div>
+                </div>
+           </a>
+
+          <!--<a href="./computer" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">信用分数</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[查信用]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[按位次]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键筛选]</span>
+                  </div>
+
+                  <div class="hezi2"><span> credit score</span></div>
+              </div>
+          </a>-->
+
+
+
+          <a href="./back" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">界面设置</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[个性化]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[背景图]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键更换]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 个性化</span></div>
+              </div>
+          </a>
+
+          <a href="./editzhiyuan" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">信息管理</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[填志愿]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[报志愿]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键修改]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 信息管理</span></div>
+              </div>
+          </a>
+
+          <a href="./back" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">返回首页</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[便捷]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[高效]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键返回]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 返回首页</span></div>
+              </div>
+          </a>
+
+<!--          <a href="./getUser" style="color:black; text-decoration: none;">-->
+<!--          <div class="hezi">-->
+
+<!--              <div class="hezi1">-->
+<!--                  <br><span class="title">后台管理界面</span>-->
+<!--                  <br><br>-->
+
+<!--                  <span style="display:inline-block;font-size:15px;color:green;-->
+
+<!--                    ">[增加]</span>-->
+<!--                  <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);-->
+<!--                    ">[删除]</span>-->
+<!--                  <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);-->
+<!--                    ">[修改]</span>-->
+<!--              </div>-->
+
+<!--              <div class="hezi2"><span>操 作</span></div>-->
+<!--          </div>-->
+<!--          </a>-->
+
+
+      </div>
+
+<!--        <div>版权归杨桂淼&trade;高文龙&trade;所有<br></div>-->
+<!--        <div>&copy;龍渺科技技术有限公司<br></div>-->
+
+
+      <div class="box2">&nbsp;用户&emsp;&emsp;&emsp;<br><a style="pointer-events:none; text-decoration:none;" href="http://www.baidu.com" disabled><img src="../Login/image/User_icon.png" width="30px" height="30px" alt="">&emsp;&emsp;</a></div>
+    </div>
+
+    <div>版权归杨桂淼&trade;高文龙&trade;所有<br></div>
+    <div>&copy;龍渺科技技术有限公司<br></div>
+
+
+</body>
+</html>

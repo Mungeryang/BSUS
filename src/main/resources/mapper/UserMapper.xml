@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bsus.mapper.UserMapper">
+    <select id="loginByUsername" resultType="com.bsus.vo.User">
+    select * from tb_user where username = #{username}
+    </select>
+    <insert id="addUser" parameterType="com.bsus.vo.User">
+        insert into tb_user(username,password) values (#{username},#{password});
+    </insert>
+
+    <select id="selectUsers" resultType="com.bsus.vo.BaseUser">
+        SELECT id,username FROM `tb_user`
+    </select>
+
+    <select id="queryUserById" resultType="com.bsus.vo.BaseUser">
+        SELECT id,username FROM `tb_user` where id = #{id}
+    </select>
+
+    <select id="selectUserByName" resultType="java.lang.Integer">
+        SELECT count(1) FROM `tb_user` where username = #{username}
+    </select>
+
+    <update id="updateUser" parameterType="com.bsus.vo.User">
+        update tb_user
+        set username = #{username},password = #{password}
+        where id = #{id}
+    </update>
+
+    <insert id="addUserVo" parameterType="com.bsus.vo.User">
+        insert into tb_user(username, password) values (#{username},#{password})
+    </insert>
+
+
+    <delete id="deleteUserById" parameterType="int">
+        delete from tb_user where id=#{id}
+    </delete>
+
+
+</mapper>

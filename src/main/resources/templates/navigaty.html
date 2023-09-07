@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<html lang="ch" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+	margin:0px;
+	padding:0px;}
+#nav{
+	height:50px;
+	width:800px;	
+	background:#eee;
+	margin:0 auto;/*0 上下 auto 左右*/
+	margin-bottom:50px;
+	}
+
+#nav ul{
+	/*box-shadow:0 0 10px rgba(0,0,0,.2); 向框添加一个或多个阴影*/
+	list-style:none;/*在一个声明中设置所有的列表属性*/	
+	/*white-space:nowrap 段落中的文本不进行换行*/
+	}
+	
+#nav ul li {
+  	float:left;
+	width:200px;
+	line-height:40px;
+	text-align:center;
+	position:relative;
+}
+
+#nav ul li a{
+	text-decoration:none;
+	color:#333;
+	padding:5px 10px;
+	display:block;
+	}
+
+
+ /* 在一级菜单中，鼠标放上去的样式 */
+#nav ul li a:hover {
+    color:#FFF;
+    }
+#nav ul li ul{
+	position:absolute;/*防止一级菜单随二级菜单变化而变化*/
+	left:0px;
+	top:40px;
+	display:none;
+}
+ /* 鼠标放在一级菜单上，显示二级菜单 */
+#nav ul li ul li{
+    float:none;
+	text-align:center;
+	margin-top:2px;
+	background-color:#eee;
+	}
+
+#nav ul li ul li a{
+	width:80px;
+}
+ /* 在二级菜单中，鼠标放上去的样式 */
+ #nav ul li ul li a:hover {
+        background-color:#eee;
+ }
+#nav ul li:hover ul{
+		display:block;
+}
+
+
+</style>
+<body>
+    <div id="nav">
+        <ul>
+          <li><a href="">选单 1</a></li>
+          <li>
+            <a href="">选单 2</a>
+            <ul>
+              <li><a href="">选单 2-1</a></li>
+              <li><a href="">选单 2-2</a></li>
+              <li><a href="">选单 2-3</a></li>
+            </ul>
+          </li>
+          <li><a href="">选单 3</a></li>
+          <li><a href="">选单 4</a></li>
+        </ul>
+      </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: url(./img/17.jpeg) no-repeat;
+        background-size: 100%;
+    }
+
+    .bx {
+        margin: 0 auto;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        list-style-type: none;
+        width: 150px;
+    }
+
+    img {
+        width: 150px;
+		height:150px;
+        border: 2px white solid;
+    }
+</style>
+<script>
+    window.onload = function () {
+        var change = document.querySelectorAll('img');
+        for (var i = 0; i < change.length; i++) {
+            change[i].onclick = function () {
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+    }
+</script>
+<body>
+    <ul class="bx">
+        <li class="box" id="img1">
+            <img src="./img/1.jpeg" alt="">
+        </li>
+        <li class="box" id="img2">
+            <img src="./img/中国2098（10）：黄海边的海水淡化枢纽.jpg" alt="">
+        </li>
+        <li class="box" id="img3">
+            <img src="./img/中国2098（11）：东水西引大渡槽.jpg" alt="">
+        </li>
+        <li class="box" id="img4">
+            <img src="./img/中国2098（12）：合作社的粮食工厂.jpg" alt="">
+        </li>
+    </ul>
+	    <ul class="bx">
+        <li class="box" id="img5">
+            <img src="./img/中国2098（13）：东水西引的终点——塔里木湖.jpg" alt="">
+        </li>
+        <li class="box" id="img6">
+            <img src="./img/中国2098（15）：满怀深情望北京.jpg" alt="">
+        </li>
+        <li class="box" id="img7">
+            <img src="./img/7.jpeg" alt="">
+        </li>
+        <li class="box" id="img8">
+            <img src="./img/8.jpeg" alt="">
+        </li>
+    </ul>
+	    <ul class="bx">
+        <li class="box" id="img9">
+            <img src="./img/9.jpeg" alt="">
+        </li>
+        <li class="box" id="img10">
+            <img src="./img/10.jpeg" alt="">
+        </li>
+        <li class="box" id="img11">
+            <img src="./img/11.jpeg" alt="">
+        </li>
+        <li class="box" id="img12">
+            <img src="./img/12.jpeg" alt="">
+        </li>
+    </ul>
+	
+	    </ul>
+	    <ul class="bx">
+        <li class="box" id="img13">
+            <img src="./img/13.jpeg" alt="">
+        </li>
+        <li class="box" id="img14">
+            <img src="./img/14.jpeg" alt="">
+        </li>
+        <li class="box" id="img15">
+            <img src="./img/15.jpeg" alt="">
+        </li>
+        <li class="box" id="img16">
+            <img src="./img/16.jpeg" alt="">
+        </li>
+    </ul>
+</body>
+
+</html>

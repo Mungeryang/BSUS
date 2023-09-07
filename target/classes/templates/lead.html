@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./css/lead.css">
+</head>
+<body>
+    <div class="box0">
+
+      <div class="box1">
+        <h1 style="text-align: center; color: rgb(0, 0, 0); ">大学要想上的好，河北大学找桂淼&trade;</h1>
+          <h3 style="text-align: center; color: rgb(0, 0, 0); ">天下大事，必作于细&reg;</h3>
+          <h3 style="text-align: center; color: rgb(0, 0, 0); ">版权为龍渺科技-LMT&copy;所有,侵权必究~!</h3>
+          <h2 style="text-align: center; color: rgb(0, 0, 0); ">^_^服务热衷于计算机学习的广大学子^_^</h2>
+          <div id="errorMsg" th:text="${username}"></div>
+        <br> <br>
+<!--          th:attr="myMoney=${money}"-->
+
+          <a href="./getSelect" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">一分一档</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[按分数]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[查位次]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键查询]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 查询位次</span></div>
+              </div>
+          </a>
+
+          <a href="https://gaokao.chsi.com.cn/sch/search--searchType-1,zgsx-syl,start-60.dhtml" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">院校信息</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[找大学]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[查专业]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[权威信息]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 心仪大学</span></div>
+              </div>
+          </a>
+
+
+           <a href="./getInfo" style="color:black; text-decoration: none;">
+                <div class="hezi">
+    
+                    <div class="hezi1">
+                        <br><span class="title">专业信息</span>
+                  <br><br>
+                  
+                    <span style="display:inline-block;font-size:15px;color:green;
+                    
+                    ">[按学校]</span>
+                    <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[按专业]</span>
+                    <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键查询]</span>
+                    </div>
+    
+                    <div class="hezi2"><span> 查询专业分数</span></div>
+                </div>
+           </a>  
+
+
+           <a href="./getShool" style="color:black; text-decoration: none;">
+                <div class="hezi">
+    
+                    <div class="hezi1">
+                        <br><span class="title">专业推荐</span>
+                  <br><br>
+                  
+                    <span style="display:inline-block;font-size:15px;color:green;
+                    
+                    ">[按分数]</span>
+                    <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[按位次]</span>
+                    <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键筛选]</span>
+                    </div>
+    
+                    <div class="hezi2"><span> 轻松选大学</span></div>
+                </div>
+           </a>
+
+          <a href="/chuangxin" method="get"  style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">CS资源宝库</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[找资源]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[学技术]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[四库全书]</span>
+                  </div>
+
+                  <div class="hezi2"><span>网罗国内外CS顶尖课程资源</span></div>
+              </div>
+          </a>
+
+          <a href="https://yz.chsi.com.cn/sch/" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">考研助手</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[找大学]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[查专业]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[权威信息]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 明确考研大学</span></div>
+              </div>
+          </a>
+
+          <a href="./computer" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">信息提交</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[综合选]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[细斟酌]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[保存提交]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 志愿信息提交</span></div>
+              </div>
+          </a>
+
+          <a href="./tab_base" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">数据分析</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[科学看]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[细斟酌]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[数据展示]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 数据展示分析</span></div>
+              </div>
+          </a>
+
+          <!--<a href="https://www.programmercarl.com/" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">学算法</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[数据结构]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[算法学习]</span>
+                      &lt;!&ndash;<span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[权威信息]</span> &ndash;&gt;
+                  </div>
+
+                  <div class="hezi2"><span> 明确考研大学</span></div>
+              </div>
+          </a>-->
+
+          <a href="./check" style="color:black; text-decoration: none;">
+              <div class="hezi">
+
+                  <div class="hezi1">
+                      <br><span class="title">返回首页</span>
+                      <br><br>
+
+                      <span style="display:inline-block;font-size:15px;color:green;
+
+                    ">[便捷]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);
+                    ">[高效]</span>
+                      <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);
+                    ">[一键返回]</span>
+                  </div>
+
+                  <div class="hezi2"><span> 返回首页</span></div>
+              </div>
+          </a>
+
+<!--          <a href="./getUser" style="color:black; text-decoration: none;">-->
+<!--          <div class="hezi">-->
+
+<!--              <div class="hezi1">-->
+<!--                  <br><span class="title">后台管理界面</span>-->
+<!--                  <br><br>-->
+
+<!--                  <span style="display:inline-block;font-size:15px;color:green;-->
+
+<!--                    ">[增加]</span>-->
+<!--                  <span style="display:inline-block;font-size:15px;color:rgb(70, 144, 87);-->
+<!--                    ">[删除]</span>-->
+<!--                  <span style="display:inline-block;font-size:15px;color:rgb(96, 120, 91);-->
+<!--                    ">[修改]</span>-->
+<!--              </div>-->
+
+<!--              <div class="hezi2"><span>操 作</span></div>-->
+<!--          </div>-->
+<!--          </a>-->
+
+
+      </div>
+
+
+
+      <div class="box2">&nbsp;用户&emsp;&emsp;&emsp;<br><a style="pointer-events:none; text-decoration:none;" href="http://www.baidu.com" disabled><img src="../Login/image/User_icon.png" width="30px" height="30px" alt="">&emsp;&emsp;</a></div>
+    </div>
+
+</body>
+</html>

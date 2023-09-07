@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link href="css/login.css" rel="stylesheet">
+</head>
+<!--<script src="js/jquery-1.10.2.min.js"></script>-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<body>
+<div id="loginDiv" style="height: 350px">
+    <form action="/login" id="form" onsubmit="return loginBtn_click();" method="post">
+<!--        <h1 id="loginMsg">LOGIN IN</h1>-->
+<!--        <div id="errorMsg">用户名或密码不正确</div>-->
+<!--        <div id="errorMsg" >${msg}</div>-->
+<!--        <div id="errorMsg" th:text="${msg}"></div>-->
+        <h1 id="loginMsg" th:text="${role}">LOGIN IN</h1>
+<!--        <p style="display: none;"><input id="role" name="role" th:text="${role}" th:value="${role}"></p>-->
+        <p>Username:<input id="username" name="username" type="text"></p>
+
+        <p>Password:<input id="password" name="password" type="password"></p>
+        <p>Remember:<input id="remember" name="remember" type="checkbox" ></p>
+        <div id="subDiv">
+            <input type="submit" class="button" value="login up">
+            <input type="reset" class="button" value="reset">&nbsp;&nbsp;&nbsp;
+            <a href="/register">没有账号？</a>
+        </div>
+    </form>
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+
+    $(document).ready(function(){
+        var strName = localStorage.getItem('keyName');
+        var strPass = localStorage.getItem('keyPass');
+        if(strName){
+            $('#username').val(strName);
+        }if(strPass){
+            $('#password').val(strPass);
+        }
+
+    });
+
+    function loginBtn_click(){
+            var strName = $('#username').val();
+            var strPass = $('#password').val();
+            localStorage.setItem('keyName',strName);
+            if($('#remember').is(':checked')){
+                localStorage.setItem('keyPass',strPass);
+            }else{
+                localStorage.removeItem('keyPass');
+            }
+        }
+
+</script>
+
+<!--<script type="text/javascript">-->
+<!--localStorage.removeItem("username");-->
+<!--localStorage.removeItem("password");-->
+<!--</script>-->
+</html>

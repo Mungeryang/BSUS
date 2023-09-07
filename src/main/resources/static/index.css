@@ -1,0 +1,59 @@
+.con_box1{
+    /* 背景颜色 */
+    background-color: rgba(60, 134, 184, 0.63);
+    /* 宽度和高度 */
+    width: 400px;
+    height: 200px;
+    /* 圆角 */
+    border-radius: 20px;
+    /* 外边距 */
+    margin: auto;
+    /* 位置 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* 文字居中 */
+    text-align: center;
+
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
+}
+.btn_style{
+    
+    background-color: rgb(67, 223, 106);
+    width: 80px;
+    height: 25px;
+
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(index1.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+}
+table td{
+    color: rgb(19, 116, 216);
+    border-radius: 20px;
+    padding: 5px 0;
+    
+}
+table{
+    border-collapse:collapse;
+    border-spacing: 50px 0;
+}
+table td button{
+    border-radius: 5px;
+    
+}
+*{
+    margin:0px;
+    padding:0px;
+}

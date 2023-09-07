@@ -1,0 +1,22 @@
+.yuanxiao span:nth-child(1){
+    /* opacity:0; */
+    position: sticky;
+    top: 0px;
+
+
+}
+main{position: relative;
+}
+
+tr td:nth-child(1){
+    background-color: rgb(66, 195, 14);
+    width: 150px;
+}
+tr td:nth-child(2){
+    background-color: rgb(207, 174, 131);
+    width: 450px;
+}
+tr td:nth-child(3){
+    background-color: rgb(212, 33, 33);
+    width:300px;
+}

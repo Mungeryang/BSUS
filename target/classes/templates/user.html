@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+    <script th:inline="javascript">
+        var message = [[${message}]];
+       if(message==null||message==undefined||message==""){
+          console.log("");
+        }else{
+          alert(message);
+        }
+
+<!--        alert(message);-->
+<!--        console.log(className);-->
+<!--        $('option[value="物理"]').attr("selected",true);-->
+
+    </script>
+</head>
+
+
+<body>
+
+<div class="ui container">
+    <div class="ui attached segment">
+        <!--        <form th:action="@{/}" method="post" style="display: inline-block !important;">-->
+        <!--            <input type="text" name="name" placeholder="输入用户名查找">-->
+        <!--            <input type="submit" value="搜索">-->
+        <!--        </form>-->
+        <a th:href="@{/update}" class="ui button mini teal" style="margin-left: 30px !important;">新增</a>
+    </div>
+    <table class="ui celled attached table" style="margin-top: 40px !important;">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>姓名</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item:${listUsers}">
+            <td th:text="${item.id}">James</td>
+            <td th:text="${item.username}">24</td>
+            <td>
+                <a th:href="@{/edit/{id}(id=${item.id})}" class="ui button mini pink">编辑</a>
+                <a th:href="@{/delete/{id}(id=${item.id})}" class="ui button mini teal">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="ui attached segment">
+        <table class="m-mobile-wide" width="425px">
+            <tbody>
+            <tr align="center">
+                <td>
+                    <a th:href="@{/getUser(pageNum=${page.pageNum}-1)}" class="ui button basic mini"
+                       th:unless="${page.isFirstPage}">上一页</a>
+                </td>
+                <td>
+                    第
+                    <h8 th:text="${page.pageNum}">2</h8>
+                    页/共
+                    <h8 th:text="${page.pages}">4</h8>
+                    页
+                    共
+                    <h8 th:text="${page.total}">29</h8>
+                    条
+                </td>
+                <td>
+                    <form name="pageForm" th:action="@{/getUser}" method="get">
+                        <div class="ui mini input ">
+                            <input type="text" class="m-bg" name="pageNum" placeholder="页码"
+                                   style="width: 50px!important; height: 27.76px!important;" required>
+                            <button type="submit"
+                                    style="font-size: 11px!important;width: 30px!important; height: 0px!important; border: none;margin: 5px;padding: 0;"
+                                    class="button mini">
+                                跳转
+                            </button>
+                        </div>
+                    </form>
+                </td>
+                <td> &nbsp;</td>
+                <td style="float: right">
+                    <a th:href="@{/getUser(pageNum=${page.pageNum}+1)}" class="ui button basic mini " style="float: right;"
+                       th:unless="${page.isLastPage}">下一页</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ui success  message" th:unless="${#strings.isEmpty(message)}">
+        <i class="close icon"></i>
+        <div class="header">提示：</div>
+        <p th:text="${message}"></p>
+    </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    $(".message .close").on('click',function () {
+        $(this).closest(".message")
+            .transition("fade");
+    })
+
+</script>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="ch" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>信息浏览</title>-->
+<!--    <link rel="stylesheet" href="./css/shool.css" type="text/css">-->
+<!--    <script type="text/javascript" src="./js/jquery.min.js"></script>-->
+
+<!--    &lt;!&ndash;    <script th:inline="javascript">&ndash;&gt;-->
+<!--    &lt;!&ndash;    var className = [[${className}]];&ndash;&gt;-->
+<!--    &lt;!&ndash;     alert(className);&ndash;&gt;-->
+<!--    &lt;!&ndash;    console.log(className);&ndash;&gt;-->
+<!--    &lt;!&ndash;    $('option[value="物理"]').attr("selected",true);&ndash;&gt;-->
+<!--    &lt;!&ndash;    </script>&ndash;&gt;-->
+<!--<body>-->
+<!--<form action="/getShool" id="form" method="get">-->
+
+<!--    <h2>信息浏览</h2>-->
+<!--    <div id="test" class="test">-->
+<!--        <div>-->
+<!--            <label>分数：</label>-->
+<!--            <input name="score" style="width:100px" th:value="${score}"></input>-->
+<!--        </div>-->
+
+<!--        <div>-->
+<!--            <label>排名：</label>-->
+<!--            <input name="order" style="width:100px" th:value="${order}"></input>-->
+<!--        </div>-->
+
+<!--        <div class="buttons">-->
+<!--            <input value="推 荐" type="submit" id="reg_btn">-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div >-->
+<!--        <table>-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>用户名</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr th:each="item:${listUsers}">-->
+<!--                <td th:text="${item}"></td>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+
+<!--        </table>-->
+<!--    </div>-->
+<!--&lt;!&ndash;    <div id="pa" class="pa">&ndash;&gt;-->
+<!--        <p>当前 <span th:text="${pageInfo.pageNum}"></span> 页,总 <span th:text="${pageInfo.pages}"></span> 页,共 <span-->
+<!--                th:text="${pageInfo.total}"></span> 条记录</p>-->
+<!--        <a th:href="@{/getUser}">首页</a>-->
+<!--        <a th:href="@{/getUser(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>-->
+<!--        <a th:href="@{/getUser(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>-->
+<!--        <a th:href="@{/getUser(pageNum=${pageInfo.pages})}">尾页</a>-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--</form>-->
+<!--</body>-->
+
+<!--</html>-->

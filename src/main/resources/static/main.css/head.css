@@ -1,0 +1,24 @@
+h1{
+    position: absolute ; left: 900px; top:20px;
+}
+header{
+    position:relative
+}
+.user{
+    width: 70px; height: 100px;
+    position: absolute; top: 2px; right: 18px;
+    /* background-color: aquamarine; */
+    background-image: url(../../Login/image/User_icon.png);
+    background-size: 70px 80px;
+    background-repeat: no-repeat;
+}
+.user{
+    text-align: center;
+    color: rgb(15, 16, 14);
+    font-size: larger;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column-reverse;
+    /* position: relative; */
+
+}
