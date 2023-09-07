@@ -16,11 +16,11 @@
 
 高文龙：前端网页设计、渲染效果
 
-<img src="D:/BSUS/pic1.png" alt="image-20230907154043414" style="zoom:45%;" />
+<img src="/BSUS/pic1.png" alt="image-20230907154043414" style="zoom:45%;" />
 
 <center>登录界面
 
-<img src="D:/BSUS/pic2.png" alt="image-20230907154106873" style="zoom:50%;" />
+<img src="/BSUS/pic2.png" alt="image-20230907154106873" style="zoom:50%;" />
 
 <center>功能界面
 
